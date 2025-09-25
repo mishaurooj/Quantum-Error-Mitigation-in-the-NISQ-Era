@@ -22,18 +22,9 @@ Error-Mitigation-NISQ/
 │── LICENSE                  # CC BY 4.0 or MIT
 │── requirements.txt         # Python dependencies
 │── notebooks/               # Jupyter notebooks
-│   ├── error_mitigation_graphs.ipynb
-│   ├── Error_mitigation_graphs_python_codes.ipynb
-│   ├── error_mitigation_ibm_kyoto(127bit)_qasm_simulator.ipynb
-│   ├── error_mitigation_ibm_osaka_ibmq(127bit)_qasm_simulator.ipynb
 │── data/                    # Calibration and raw data
-│   ├── ibm_kyoto_calibrations_2024-07-07.csv
-│   ├── ibm_osaka_calibrations_2024-07-05.csv
 │── figures/                 # Figures for results
-│   ├── CaseA-1.png
-│   ├── CaseA-2.png
 │── paper/                   # Reference to published paper
-│   ├── mathematics-12-02235-v2.pdf
 ```
 
 ---
@@ -62,11 +53,41 @@ pip install -r requirements.txt
 ---
 
 ## 📊 Results
-- Error mitigation significantly improved expectation values and variances across IBM Kyoto and Osaka.  
-- Example improvements:  
-  - **IBM Kyoto (T-REx):** Expectation values improved from **0.09 → 0.35**  
-  - **IBM Osaka (Dynamic Decoupling):** Expectation values improved from **0.2492 → 0.3788**  
-- Results aligned closer with **QASM simulator** baselines.
+
+### Case A – Expectation Values & Variances
+- **CaseA-1.png**: Comparison of expectation values between QASM Simulator, IBM Osaka, and IBM Kyoto, including percentage differences.  
+![CaseA-1](./Figures/CaseA-1.png)
+
+- **CaseA-2.png**: Comparison of variance (σ²) values between QASM Simulator, IBM Osaka, and IBM Kyoto, including percentage differences.  
+![CaseA-2](./Figures/CaseA-2.png)
+
+### Case B – Error Mitigation with T-REx
+- **CaseB-1.png**: Demonstrates improvements in expectation values after applying T-REx on IBM Kyoto and Osaka.  
+![CaseB-1](./Figures/CaseB-1.png)
+
+- **CaseB-2.png**: Variance reductions achieved with T-REx.  
+![CaseB-2](./Figures/CaseB-2.png)
+
+### Case C – Error Mitigation with Dynamic Decoupling
+- **CaseC-1.png**: Expectation values before and after applying Dynamic Decoupling.  
+![CaseC-1](./Figures/CaseC-1.png)
+
+- **CaseC-2.png**: Variance reductions under Dynamic Decoupling.  
+![CaseC-2](./Figures/CaseC-2.png)
+
+### Case D – Zero-Noise Extrapolation (ZNE)
+- **CaseD-1.png**: Expectation values comparison for ZNE.  
+![CaseD-1](./Figures/CaseD-1.png)
+
+- **CaseD-2.png**: Variance analysis under ZNE.  
+![CaseD-2](./Figures/CaseD-2.png)
+
+### Case E – Combined Error Mitigation
+- **CaseE-1.png**: Final expectation values comparison using combined mitigation strategies.  
+![CaseE-1](./Figures/CaseE-1.png)
+
+- **CaseE-2.png**: Variance comparison under combined strategies.  
+![CaseE-2](./Figures/CaseE-2.png)
 
 ---
 
